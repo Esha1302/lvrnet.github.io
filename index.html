@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="LVRNet: Lightweight Image Restoration for Aerial Images under Low Visibility.">
+  <meta name="keywords" content="Dehazing, Image Enhancement, FFANet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LVRNet: Lightweight Image Restoration for Aerial Images under Low Visibility</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/Esha1302">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">LVRNet: Lightweight Image Restoration for Aerial Images under Low Visibility</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=mnUQ4JwAAAAJ&hl=en&authuser=1">Esha Pahwa</a><sup>*1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=37Cxhr0AAAAJ&hl=en&authuser=1">Achleshwar Luthra</a><sup>*1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=YyCGRO8AAAAJ&hl=en&authuser=1">Pratik Narang</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Birla Institute of Technology and Science, Pilani</span>
+            <span class="author-block"><sup>2</sup>Carnegie Mellon University</span> <br>
+            <span class="author-block"><sup>*</sup>Equal Contribution</span> <br>
+            <span class="author-block"> <strong><i>In Student Abstract, AAAI 2023</i></strong></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2301.05434.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2301.05434"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1lQUzXrsCRERWxrP9qUomC_-R_rfD92-t/view"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-image"></i>
+                  </span>
+                  <span>Poster</span>
+                  </a>
+              </span> 
+              <span class="link-block">
+                <a href="https://docs.google.com/presentation/d/1jRg8nC07neuUNMKA9Iq62k9DVo-yGxUIzDsVMeecQMc/edit?pli=1#slide=id.g1c4a3b21676_2_45"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-laptop"></i>
+                  </span>
+                  <span>Slides</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Achleshwar/lvrnet"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1j6iH-v0ZAWjxQxRdxXad1T1H02ogmjbm?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span> 
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/lvrnet-teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span>LVRNet</span> is able to restore the clear image
+        from different combinations of dark and hazy images.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Learning to recover clear images from images having a
+            combination of degrading factors is a challenging task.
+            That being said, autonomous surveillance in low visibility
+            conditions caused by high pollution/smoke, poor air quality index, low light, atmospheric scattering, and haze during a blizzard becomes even more important to prevent accidents. It is thus crucial to form a solution that can result in a high-quality image and is efficient enough to be
+            deployed for everyday use. However, the lack of proper
+            datasets available to tackle this task limits the performance
+            of the previous methods proposed. To this end, we generate
+            the LowVis-AFO dataset, containing 3647 paired dark-hazy
+            and clear images. We also introduce a lightweight deep
+            learning model called Low-Visibility Restoration Network
+            (LVRNet). It outperforms previous image restoration methods with low latency, achieving a PSNR value of 25.744 and
+            an SSIM of 0.905, making our approach scalable and ready
+            for practical use. 
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/lvrnet-method.mp4"
+                    type="video/mp4">
+          </video>
+          <h4>
+            <align='justify'>
+              Starting from the top-left: The input image is passed to the pre-processing
+convolution layers where feature maps are learned and passed to NAF Groups (here we have used 3 groups). The features extracted from
+each group are concatenated (or stacked) along the channel dimension and sent as input to the Level Attention Module (LAM). Finally, we
+pass LAM’s output to CNN layers for post-processing, adding the original image through residual connection and extracting the restored
+image at the bottom-left.
+            </align>
+          </h4>
+        </div>
+      </div>
+    </section>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Results</h2>
+      <h3 class="title is-4">Comparison Against Existing Methods</h3>
+      
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <img src=".\static\images\in1.jpg">
+        </div>
+        <div class="item item-chair-tp">
+          <img src=".\static\images\zerodce1.jpg">
+        </div>
+        <div class="item item-fullbody">
+          <img src=".\static\images\dn1.jpg">
+        </div>
+        <div class="item item-blueshirt">
+          <img src=".\static\images\bppnet1.jpg">
+        </div>
+        <div class="item item-mask">
+          <img src=".\static\images\stardce1.jpg">
+        </div>
+        <div class="item item-coffee">
+          <img src=".\static\images\ffanet1.jpg">
+        </div>
+        <div class="item item-toby">
+          <img src=".\static\images\msbdn1.jpg">
+        </div>
+        <div class="item item-shiba">
+          <img src=".\static\images\ours1.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <img src=".\static\images\in2.jpg">
+        </div>
+        <div class="item item-chair-tp">
+          <img src=".\static\images\zerodce2.jpg">
+        </div>
+        <div class="item item-shiba">
+          <img src=".\static\images\dn2.jpg">
+        </div>
+        <div class="item item-fullbody">
+          <img src=".\static\images\bppnet2.jpg">
+        </div>
+        <div class="item item-blueshirt">
+          <img src=".\static\images\stardce2.jpg">
+        </div>
+        <div class="item item-mask">
+          <img src=".\static\images\ffanet2.jpg">
+        </div>
+        <div class="item item-coffee">
+          <img src=".\static\images\msbdn2.jpg">
+        </div>
+        <div class="item item-toby">
+          <img src=".\static\images\ours2.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{pahwa2023lvrnet,
+      title={LVRNet: Lightweight Image Restoration for Aerial Images under Low Visibility},
+      author={Pahwa, Esha and Luthra, Achleshwar and Narang, Pratik},
+      journal={arXiv preprint arXiv:2301.05434},
+      year={2023}
+    }</code></pre>
+  </div>
+</section>
+
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    <p> 
+      We would like to thank the authors of <a href="https://github.com/zhilin007/FFA-Net/tree/master">FFANet</a>, 
+      <a href="https://github.com/megvii-research/NAFNet">NAFNet</a> and <a href="https://github.com/HDCVLab/MC-Blur-Dataset">MC-Blur</a> 
+      for their codebase. We have used their codebase as a starting point for our work. This material is based upon work 
+      supported by <a href='https://www.artpark.in/'>ARTPARK, IISc</a>.
+    </p>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      
+      <a class="icon-link" href="https://github.com/Achleshwar/lvrnet" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          
+          <p>
+            This website is made from this template <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
